@@ -1,0 +1,530 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Medium;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\fnil\fcharset0 .SFNSText;\f4\fnil\fcharset0 Menlo-Italic;}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red50\green98\blue178;\red0\green0\blue0;
+\red245\green245\blue245;}
+{\*\expandedcolortbl;;\cssrgb\c20000\c20000\c20000;\cssrgb\c25098\c47059\c75294;\cssrgb\c0\c0\c0\c3922;
+\cssrgb\c96863\c96863\c96863;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f0\b\fs20 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Octave CheatSheet\cf3 \strokec3 \
+\pard\pardeftab720\sl240\partightenfactor0
+\cf2 \strokec2 Basics\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl240\partightenfactor0
+\ls1\ilvl0
+\f1\b0 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 not equal 
+\f2 \cb4 ~=
+\f1 \cb1 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 logical AND 
+\f2 \cb4 &&
+\f1 \cb1 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 logical OR 
+\f2 \cb4 ||
+\f1 \cb1 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 logical XOR 
+\f2 \cb4 xor(1,0)
+\f1 \cb1 \
+\pard\pardeftab720\sl240\partightenfactor0
+\cf2 A semicolon 
+\f2 \cb4 ;
+\f1 \cb1  at the end of a line will suppress the output\
+
+\f2 \cb4 v = 1:5
+\f1 \cb1  creates a 1x5 Matrix (linear vector) with the numbers one to five. 
+\f2 \cb4 v = 1:0.1:2
+\f1 \cb1  also creates a vector but with the numbers from one to two with a step size of 0.1.\
+
+\f2 \cb5 >> v = 1:5\
+v =\
+    1   2   3   4   5 \
+>> v = 1:0.1:2\
+v =\
+1.0000    1.1000    1.2000    1.3000    1.4000    1.5000    1.6000    1.7000    1.8000    1.9000    2.0000\
+
+\f1 \cb1 To display the 5th number of this vectors use 
+\f2 \cb4 v(5)
+\f1 \cb1 . 
+\f3\i Beware that ocatve is 1 based
+\f1\i0 . Displaying a range of numbers use 
+\f2 \cb4 v(3:5)
+\f1 \cb1  to display the 3rd, 4th, and 5th number.\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f0\b \cf3 \strokec3 \
+\pard\pardeftab720\sl240\partightenfactor0
+\cf2 \strokec2 Useful functions\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f2\b0 \cf2 \cb4 help _function name_
+\f1 \cb1  will give you the man page of this function.\
+
+\f2 \cb4 ones(x [, y])
+\f1 \cb1  creates a matrix with ones. If only 
+\f2 \cb4 x
+\f1 \cb1  is provided it is a squared matrix of size 
+\f2 \cb4 x
+\f1 \cb1 . If 
+\f2 \cb4 y
+\f1 \cb1  is provides it has the size x cross y.\
+
+\f2 \cb4 zeros(x [, y])
+\f1 \cb1  behaves the same as 
+\f2 \cb4 ones()
+\f1 \cb1  but will give a zero-matrix.\
+
+\f2 \cb4 rand(x [, y])
+\f1 \cb1  Return a matrix with random elements uniformly distributed on the interval (0, 1).\
+
+\f2 \cb4 randn(x [, y])
+\f1 \cb1  Return a matrix with normally distributed random elements having zero mean and variance one. The arguments are handled the same as the arguments for 
+\f2 \cb4 rand
+\f1 \cb1 .\
+
+\f2 \cb4 hist(x [, y])
+\f1 \cb1  Produce histogram counts of plots. 
+\f2 \cb4 y
+\f1 \cb1  is the number of buckets.\
+
+\f2 \cb4 eye(x [, y]])
+\f1 \cb1  Produces an identity matrix.\
+
+\f2 \cb4 size(A [, DIM])
+\f1 \cb1  Return the number of rows and colums of A.\uc0\u8232 
+\f2 \cb4 DIM = 1
+\f1 \cb1  number rows\uc0\u8232 
+\f2 \cb4 DIM = 2
+\f1 \cb1  number columns\
+
+\f2 \cb4 length(A)
+\f1 \cb1  Return the 
+\f3\i length
+\f1\i0  of the object A. For Matrix objects, the length is the number of rows or columns, whichever is greater (this odd definition is used for compatibility with MATHLAB).\
+
+\f2 \cb5 log(a)      % natural logarithm\
+abs(a)      % absolute value\
+sign(a)     % signum function\
+exp(a)      % compute e^a\
+\cb4 who
+\f1 \cb1  Lists currently defined varibales matchin the given pattern. 
+\f2 \cb4 whos
+\f1 \cb1  Provide detailed information on currently defined variables.\
+
+\f2 \cb4 sum(a)
+\f1 \cb1 , 
+\f2 \cb4 sum(A,1)
+\f1 \cb1  sums up all columns. 
+\f2 \cb4 sum(A,2)
+\f1 \cb1  sums up all rows 
+\f2 \cb4 prod(a)
+\f1 \cb1  takes the product of each column\
+
+\f2 \cb4 floor(a)
+\f1 \cb1  rounds down 
+\f2 \cb4 ceil(a)
+\f1 \cb1  rounds up\
+
+\f2 \cb4 clear
+\f1 \cb1  will clear all variables or only the ones who are named.\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f0\b \cf3 \strokec3 \
+\pard\pardeftab720\sl240\partightenfactor0
+\cf2 \strokec2 Save and Load Data\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f1\b0 \cf2 You can save and load data in octave easily with the two commands 
+\f2 \cb4 save
+\f1 \cb1  and 
+\f2 \cb4 load
+\f1 \cb1 .\
+To save a specific variable 
+\f2 \cb4 v
+\f1 \cb1  to the file 
+\f2 \cb4 filename.dat
+\f1 \cb1 \
+
+\f2 \cb5 save filename.dat v; % save data of v in binary format\
+save filename.txt v --ascii % save data of v in readable version\
+
+\f1 \cb1 Loading data is as simple as saving.\
+
+\f2 \cb5 % both are equivalent\
+load filename.dat\
+load('filename.dat')\
+
+\f1 \cb1 The file will be saved in the current directory and will be loaded from the current dir.\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f0\b \cf3 \strokec3 \
+\pard\pardeftab720\sl240\partightenfactor0
+\cf2 \strokec2 Matrixes\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f1\b0 \cf2 Let 
+\f2 \cb4 A
+\f1 \cb1  be the matrix: 
+\f2 \cb4 A = [1 2; 3 4; 5 6]
+\f1 \cb1 \
+
+\f2 \cb5 A =\
+    1   2\
+    3   4\
+    5   6\
+
+\f1 \cb1 The semicolon indicates a new row and a space or comma is a new column. Instead of typing a semicolon it is also possible to hit 
+\f2 \cb4 enter
+\f1 \cb1 .\
+Output last element in Matrix\
+
+\f2 \cb5 >> A(end, end)\
+ans = 6\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f0\b \cf3 \cb1 \strokec3 \
+\pard\pardeftab720\sl240\partightenfactor0
+\cf2 \strokec2 Display Data\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f2\b0 \cf2 \cb5 % show number in first row and second column\
+>> A(1,2)\
+ans = 2\
+\
+% show second row: colon means 'all'\
+>> A(2,:)\
+ans =\
+    3   4\
+\
+% show second column\
+>> A(:,2)\
+ans =\
+    2\
+    4\
+    6\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f0\b \cf3 \cb1 \strokec3 \
+\pard\pardeftab720\sl240\partightenfactor0
+\cf2 \strokec2 Assign new Data\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f2\b0 \cf2 \cb5 % replace second column by 10, 11, and 12\
+>> A(:,2) = [10,11,12]\
+% in this case it doesn't matter if comma or semicolon is used\
+>> A(:,2) = [10;11;12]\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f0\b \cf3 \cb1 \strokec3 \
+\pard\pardeftab720\sl240\partightenfactor0
+\cf2 \strokec2 Concatinating Matrixes\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f2\b0 \cf2 \cb5 >> B = [20 21; 22 23; 24 25]\
+>> C = [A B] % A B\
+ans =\
+    1   2\
+    3   4\
+    5   6\
+    20  21\
+    22  23\
+    24  25\
+\
+>> D = [A; B] % A append B\
+ans =\
+    1   2   20  21\
+    3   4   22  23\
+    5   6   24  25\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f0\b \cf3 \cb1 \strokec3 \
+\pard\pardeftab720\sl240\partightenfactor0
+\cf2 \strokec2 Transpose a matrix or a vector\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f2\b0 \cf2 \cb5 >> A'\
+ans =\
+    1   3   5\
+    2   4   6\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f0\b \cf3 \cb1 \strokec3 \
+\pard\pardeftab720\sl240\partightenfactor0
+\cf2 \strokec2 max values and find()\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f2\b0 \cf2 \cb5 >> max(magic(4)) % returns a 1x4 vector with max-values per column\
+ans =\
+    16  14  15  13\
+\
+>> [val, ind] = max(magic(4)) % retuns 2 vectors: 1. values, 2. indexes\
+val =\
+    16  14  15  13\
+ind =\
+    1   4   4   1\
+
+\f1 \cb1 To find the largest value in a matrix you can either chain to 
+\f2 \cb4 max()
+\f1 \cb1  functions or take the complete matrix.\
+
+\f2 \cb5 >> max(max(A)); % Both are equivalent\
+>> max(A(:))\
+ans =\
+    6\
+
+\f1 \cb1 You can search thru matrixes and vectors with a condition\
+
+\f2 \cb5 >> find(A < 3) % returns a index-vector where number < 3\
+ans =\
+    1\
+    4\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f0\b \cf3 \cb1 \strokec3 \
+\pard\pardeftab720\sl240\partightenfactor0
+\cf2 \strokec2 Flipping a matrix\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f1\b0 \cf2 Sometimes it is necessary to flip a matrix upsidedown.\
+
+\f2 \cb5 >> flipud(A)\
+ans =\
+    5   6\
+    3   4\
+    1   2\
+
+\f3\i \cb1 Hint: useful in combination with the identity matrix 
+\f4 \cb4 flipud(eye(4))
+\f1\i0 \cb1 \
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f0\b \cf3 \strokec3 \
+\pard\pardeftab720\sl240\partightenfactor0
+\cf2 \strokec2 Sum of diagonals in a square matrix\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f1\b0 \cf2 Example: A magic matrix is a square matrix where the sum of rows, columns and diagonals are the same result. Let's check the sum of diagonals\
+
+\f2 \cb5 >> M = magic(4);\
+>> sum(sum(M.*eye(4))) % sum of diagonal top left to bottom right\
+ans = 34\
+\
+>> sum(sum(M.* flipud(eye(4) ))) % sum of diagonal bottom left to top right\
+ans = 34\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f0\b \cf3 \cb1 \strokec3 \
+\pard\pardeftab720\sl240\partightenfactor0
+\cf2 \strokec2 Inverse matrix\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f1\b0 \cf2 There exists serveral ways to create a inverse matrix in octave\
+
+\f2 \cb5 >> inv(M)           % warning: yes\
+>> pinv(M)          % warning: no\
+>> M^-1             % warning: no\
+>> M\\eye(size(M))   % warning: yes\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f0\b \cf3 \cb1 \strokec3 \
+\pard\pardeftab720\sl240\partightenfactor0
+\cf2 \strokec2 Ploting\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f2\b0 \cf2 \cb4 plot(x, y)
+\f1 \cb1  plot a graph with 
+\f2 \cb4 x
+\f1 \cb1  as x-axis and 
+\f2 \cb4 y
+\f1 \cb1  as y-axis. 
+\f2 \cb4 x
+\f1 \cb1  and 
+\f2 \cb4 y
+\f1 \cb1  has to match in length.\
+
+\f2 \cb4 hold on
+\f1 \cb1  will plot updated in the current plot instead of replace the current plot.\
+
+\f2 \cb4 plot(x, y2, 'r')
+\f1 \cb1  will plot a graph in red.\
+
+\f2 \cb4 axis([a b c d])
+\f1 \cb1  X-axis will start at 
+\f2 \cb4 a
+\f1 \cb1  and goes to 
+\f2 \cb4 b
+\f1 \cb1 , and Y-axis will start from 
+\f2 \cb4 c
+\f1 \cb1  and goes to 
+\f2 \cb4 d
+\f1 \cb1 . Example 
+\f2 \cb4 axis([0.5 1 -1 1])
+\f1 \cb1 \
+
+\f2 \cb4 clf;
+\f1 \cb1  clear figure\
+
+\f2 \cb4 imagesc(A)
+\f1 \cb1  grid of colors for matrix 
+\f2 \cb4 colorbar
+\f1 \cb1  display colorbar, kind of legend 
+\f2 \cb4 colormap gray
+\f1 \cb1  display only gray-scale\
+Example: 
+\f2 \cb4 imagesc(A), colorbar, colormap gray;
+\f1 \cb1 \
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f0\b \cf3 \strokec3 \
+\pard\pardeftab720\sl240\partightenfactor0
+\cf2 \strokec2 Labels\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f2\b0 \cf2 \cb4 xlabel('Zoidberg')
+\f1 \cb1 , 
+\f2 \cb4 ylabel('Bender')
+\f1 \cb1 , 
+\f2 \cb4 legend('fry', 'lila')
+\f1 \cb1 , 
+\f2 \cb4 title('Futurama')
+\f1 \cb1 \
+
+\f2 \cb4 print -dpng 'myPlot.png'
+\f1 \cb1  export plot as PNG file. For other format see 
+\f2 \cb4 help plot
+\f1 \cb1 \
+
+\f2 \cb4 close
+\f1 \cb1  close the plot, as simple as that.\
+
+\f2 \cb4 figure(1); plot(x, y)
+\f1 \cb1  plot graph as 
+\f3\i figure 1
+\f1\i0  
+\f2 \cb4 figure(2); plot(x, y2)
+\f1 \cb1  plot graph as 
+\f3\i figure 2
+\f1\i0 \
+
+\f2 \cb4 subplot(x,y,POS);
+\f1 \cb1  plot multiple graphs in one windows as a X-by-Y grid at position 
+\f2 \cb4 POS
+\f1 \cb1 \
+
+\f2 \cb5 >> subplot(1,2,1);\
+>> plot(x, y);\
+>> subplot(1,2,2);\
+>> plot(x, y2);\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f0\b \cf3 \cb1 \strokec3 \
+\pard\pardeftab720\sl240\partightenfactor0
+\cf2 \strokec2 Functions & control statements\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f1\b0 \cf2 Functions are saved in files with the file-ending 
+\f2 \cb4 .m
+\f1 \cb1  for MATHLAB. The syntax is quite simple:\
+
+\f2 \cb5 function y = function_name(x)\
+    y = x^2;\
+\
+% y is the return value\
+% x is a parameter\
+% is also possible to return multiple values\
+\
+function [y1, y2] = function_name(x)\
+    y1 = x^2\
+    y2 = x^3\
+
+\f1 \cb1 Call your function in octave like 
+\f2 \cb4 function_name(5)
+\f1 \cb1 . You have to be in the same dir as the file or add it to your search-path (
+\f2 \cb4 addpath()
+\f1 \cb1 ).\
+
+\f2 \cb4 for
+\f1 \cb1 - and 
+\f2 \cb4 while
+\f1 \cb1 -loops are easy and useful in octave.\
+
+\f2 \cb5 >> for i=1:10\
+>>      disp(i)\
+>> end;\
+\
+>> i = 1;\
+>> while (i ~= 10)\
+>>      disp(i);\
+>>      i = i+1;\
+>> endwhile;\
+
+\f1 \cb1 It is also possible to use 
+\f2 \cb4 if
+\f1 \cb1 -conditions\
+
+\f2 \cb5 % i = 10\
+>> if (i == 10)\
+>>      sprintf('yes')\
+>> else\
+>>      sprintf('no')\
+>> endif\
+ans = yes\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f0\b \cf3 \cb1 \strokec3 \
+\pard\pardeftab720\sl240\partightenfactor0
+\cf2 \strokec2 Various\
+\pard\pardeftab720\sl240\partightenfactor0
+
+\f1\b0 \cf2 The following commands can be used within octave:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl240\partightenfactor0
+\ls2\ilvl0
+\f2 \cf2 \cb4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 cd
+\f1 \cb1 \
+\ls2\ilvl0
+\f2 \cb4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 pwd
+\f1 \cb1 \
+\ls2\ilvl0
+\f2 \cb4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 ls [-la]
+\f1 \cb1 \
+\ls2\ilvl0
+\f2 \cb4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 dir
+\f1 \cb1 \
+\pard\pardeftab720\sl240\partightenfactor0
+\cf2 It is possible to change octave's prompt. Use 
+\f2 \cb4 PS1('>> ');
+\f1 \cb1  to change the promt to 
+\f2 \cb4 >>
+\f1 \cb1 \
+
+\f2 \cb4 disp(a);
+\f1 \cb1  will display the variable 
+\f2 \cb4 a
+\f1 \cb1 . Useful in loops or conditions.\
+
+\f2 \cb4 magic(x)
+\f1 \cb1  Create an N-by-N magic square.\
+For more controll in displaying stuff use 
+\f2 \cb4 sprintf('%i', a);
+\f1 \cb1 . It follows the C-standard.\
+
+\f2 \cb4 format long
+\f1 \cb1  or 
+\f2 \cb4 format short
+\f1 \cb1  adjusts the length of output in octave.\
+
+\f2 \cb4 addpath('_path_')
+\f1 \cb1  will add a path to the search-path for octave. I.e. Octave will also look in this path for functions and files.\
+}

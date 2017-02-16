@@ -1,0 +1,15 @@
+GNU OCTAVE
+
+pkg install -forge NOMBREPAQUETE
+pkg load NOMBREPAQUETE
+
+Guarda variables en fichero (bin):
+save -mat workspace.mat;
+load workspace.mat;
+
+Guarda UNA variable en un fichero en formato txt:
+save -ascii onevar.txt A;
+load onevar.txt;
+A=load('onevar.txt');
+
+fopen, fprintf, fclose
