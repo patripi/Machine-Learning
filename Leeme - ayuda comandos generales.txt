@@ -13,3 +13,5 @@ load onevar.txt;
 A=load('onevar.txt');
 
 fopen, fprintf, fclose
+
+cd /Users/patriciapisonero/Documents/GitHub/Octave
