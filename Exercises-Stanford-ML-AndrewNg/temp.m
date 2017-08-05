@@ -8,6 +8,5 @@ x1_3=(x1_3-mean(x1))/S1 % Resultado: valor actualizado
 
 % Generar ds random 10.000 valores
 % y pintar histagrama
-
 w=-6+sqrt(10)*(randn(1,10000));
 hist(w,50)
